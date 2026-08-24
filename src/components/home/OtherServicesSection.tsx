@@ -3,24 +3,34 @@ import CtaButton from "@/components/ui/CtaButton";
 
 const services = [
   {
-    icon: "🛋️",
-    title: "Estofados Corporativos",
-    description: "Higienização de sofás e poltronas de recepções e salas de espera.",
+    icon: "🧹",
+    title: "Limpeza Geral de Carpetes",
+    description: "Higienização completa e periódica para manter o padrão de limpeza em dia.",
   },
   {
-    icon: "🎬",
-    title: "Poltronas de Auditório e Cinema",
-    description: "Limpeza em grande escala, com pouco tempo de interdição do espaço.",
+    icon: "🗺️",
+    title: "Remoção de Manchas em Grandes Áreas",
+    description: "Tratamento de sujeira espalhada por grandes extensões de carpete.",
   },
   {
-    icon: "🧵",
-    title: "Tapetes Decorativos",
-    description: "Renovação de cor e textura sem encharcar peças delicadas.",
+    icon: "🔴",
+    title: "Manchas Pontuais",
+    description: "Remoção rápida de manchas localizadas, sem precisar higienizar todo o ambiente.",
   },
   {
-    icon: "💧",
-    title: "Impermeabilização de Forros e Divisórias",
-    description: "Proteção extra contra manchas e umidade em áreas de grande circulação.",
+    icon: "🚶",
+    title: "Manchas de Caminhos",
+    description: "Tratamento das áreas de maior tráfego, onde a sujeira se acumula mais rápido.",
+  },
+  {
+    icon: "🥤",
+    title: "Manchas de Bebidas",
+    description: "Remoção de resíduos de café, refrigerante e outros líquidos sem deixar odor.",
+  },
+  {
+    icon: "⏳",
+    title: "Manchas Antigas",
+    description: "Tratamento especializado para manchas incrustadas há muito tempo no carpete.",
   },
 ];
 
@@ -34,7 +44,7 @@ export default function OtherServicesSection() {
           description="Além do carpete, cuidamos de outros ambientes corporativos que também precisam de higienização especializada."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.title}

@@ -1,12 +1,36 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import Image from "next/image";
 
-
-const highlights = [
-  "Limpeza a seco: sem encharcar o carpete",
-  "Secagem rápida, uso liberado em poucas horas",
-  "Baixo ruído, sem impacto na rotina da empresa",
-  "Elimina até 99% de ácaros, fungos e bactérias",
+const benefits = [
+  {
+    title: "Tudo limpo e seco imediatamente",
+    description: "Eficiência em resultados imediatos sem interdição do espaço.",
+  },
+  {
+    title: "Higiene de nível Cristal",
+    description:
+      "Eliminação de 99% de ácaros, bactérias e germes. A saúde do ambiente onde os olhos não veem.",
+  },
+  {
+    title: "Alta produtividade",
+    description:
+      "Produção de até 250 m² por hora com equipe reduzida e menor impacto de manutenção.",
+  },
+  {
+    title: "Vida útil prolongada",
+    description:
+      "Verticalização das fibras através da escovação cilíndrica, aumentando a performance do revestimento.",
+  },
+  {
+    title: "Redução de custos operacionais",
+    description:
+      "Rapidez na entrega que reduz a necessidade de acompanhamento e horas extras.",
+  },
+  {
+    title: "ROI com eficiência produtiva",
+    description:
+      "Ambientes saudáveis geram ganho expressivo na produtividade dos funcionários.",
+  },
 ];
 
 export default function MethodSection() {
@@ -17,22 +41,20 @@ export default function MethodSection() {
           <SectionHeading
             align="left"
             eyebrow="Metodologia de Limpeza"
-            title="Um processo pensado para não parar a sua operação"
-            description={[
-              "Combinamos equipamentos de alta performance e produtos específicos para higienizar carpetes comerciais em profundidade, restaurando aparência e conforto sem exigir a interdição do ambiente.",
-              "Cada visita começa com uma avaliação do tipo de fibra e do nível de sujidade do ambiente, para calibrar temperatura, pressão e produtos usados na extração. Assim, garantimos o mesmo padrão de qualidade em qualquer área da sua empresa, do corredor de maior circulação às salas de reunião.",
-            ]}
+            title="Benefícios práticos da nossa metodologia"
+            description="Nossa metodologia entrega resultados visíveis sem interromper a operação da empresa. A tecnologia remove sujidades profundas, revitaliza as fibras do carpete e permite o uso imediato do ambiente, com mais praticidade, higiene e eficiência."
           />
           <div className="grid gap-4 sm:grid-cols-2">
-            {highlights.map((highlight) => (
+            {benefits.map((benefit) => (
               <div
-                key={highlight}
-                className="flex items-start gap-3 rounded-xl border border-zinc-200 bg-brand-tint/40 p-5"
+                key={benefit.title}
+                className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-brand-tint/40 p-5"
               >
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-accent text-sm font-bold text-brand-dark">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark text-sm font-bold text-brand-accent">
                   ✓
                 </span>
-                <span className="text-sm text-zinc-700">{highlight}</span>
+                <h3 className="font-semibold text-brand-dark">{benefit.title}</h3>
+                <p className="text-sm text-zinc-700">{benefit.description}</p>
               </div>
             ))}
           </div>

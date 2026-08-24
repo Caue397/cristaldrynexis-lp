@@ -1,13 +1,22 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import TechnologyCarousel from "@/components/home/TechnologyCarousel";
 
-const advantages = [
-  "Extração a seco de alta performance",
-  "Sem encharcamento, sem risco de mofo",
-  "Até 7x mais eficiente que métodos tradicionais",
-  "Renova a cor e o volume das fibras",
-  "Elimina até 99% de ácaros, fungos e bactérias",
-  "Produtos biodegradáveis e seguros",
+const details = [
+  {
+    title: "Cristalização",
+    description:
+      "A tecnologia Cristal DryNexis atua onde a aspiração comum não alcança. Nossa solução a seco transforma a sujeira incrustada em microcristais removíveis, enquanto o equipamento exclusivo escova profundamente as fibras do carpete, liberando partículas presas da base à superfície.",
+  },
+  {
+    title: "Verticalização",
+    description:
+      "Além da higienização profunda, as escovas especiais ajudam a verticalizar as fibras, recuperando a maciez, a densidade da trama e a aparência original do revestimento, tudo com resultado imediato e sem interdição do ambiente.",
+  },
+  {
+    title: "Efeito Acumulativo: Nível Cristal de Limpeza",
+    description:
+      "Nosso processo de cristalização a seco proporciona uma limpeza profunda e de efeito gradativo. Isso significa que a cada ciclo de limpeza, os resultados se tornam ainda melhores e mais duradouros, facilitando a conservação diária.",
+  },
 ];
 
 export default function TechnologySection() {
@@ -19,19 +28,14 @@ export default function TechnologySection() {
             align="left"
             tone="light"
             eyebrow="Tecnologia Cristal Dry Nexis"
-            title="A tecnologia de limpeza a seco mais avançada do Brasil"
-            description="Nosso sistema exclusivo combina equipamentos de última geração com insumos de alta performance, entregando uma higienização profunda sem parar a rotina da sua empresa."
+            title="Tecnologia exclusiva Cristal DryNexis"
           />
-          <div className="grid gap-4 sm:grid-cols-2">
-            {advantages.map((advantage) => (
-              <div
-                key={advantage}
-                className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-5"
-              >
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-accent text-sm font-bold text-brand-dark">
-                  ✓
-                </span>
-                <span className="text-sm text-zinc-200">{advantage}</span>
+
+          <div className="flex flex-col gap-6">
+            {details.map((detail) => (
+              <div key={detail.title} className="flex flex-col gap-2">
+                <h3 className="font-semibold text-brand-accent">{detail.title}</h3>
+                <p className="text-sm text-zinc-300">{detail.description}</p>
               </div>
             ))}
           </div>

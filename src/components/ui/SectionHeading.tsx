@@ -18,23 +18,25 @@ export default function SectionHeading({
   const descriptionColor = tone === "dark" ? "text-zinc-600" : "text-zinc-200";
 
   return (
-    <div className={`flex max-w-2xl flex-col gap-3 ${alignment}`}>
+    <div className={`flex max-w-4xl flex-col gap-3 ${alignment}`}>
       {eyebrow && (
         <span className="text-sm font-semibold uppercase tracking-wide text-brand-accent">
           {eyebrow}
         </span>
       )}
       <h2 className={`text-3xl font-bold tracking-tight sm:text-4xl ${titleColor}`}>{title}</h2>
-      {description &&
-        (Array.isArray(description) ? (
-          description.map((paragraph) => (
-            <p key={paragraph} className={`text-lg ${descriptionColor}`}>
-              {paragraph}
-            </p>
-          ))
-        ) : (
-          <p className={`text-lg ${descriptionColor}`}>{description}</p>
-        ))}
+      <div className={`${alignment}`}>
+        {description &&
+          (Array.isArray(description) ? (
+            description.map((paragraph) => (
+              <p key={paragraph} className={`text-lg ${descriptionColor}`}>
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className={`text-lg ${descriptionColor}`}>{description}</p>
+          ))}
+      </div>
     </div>
   );
 }
