@@ -2,13 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#resultados", label: "Resultados" },
-  { href: "#aplicacoes", label: "Aplicações" },
-  { href: "#metodologia", label: "Metodologia" },
-  { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#contratos", label: "Contratos" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#faq", label: "Dúvidas" },
+  { href: "/#resultados", label: "Resultados" },
+  { href: "/#aplicacoes", label: "Aplicações" },
+  { href: "/#contratos", label: "Contratos" },
+  { href: "/persianas-e-cortinas", label: "Persianas e Cortinas" },
+  { href: "/#servicos", label: "Serviços" },
+  { href: "/#faq", label: "Dúvidas" },
 ];
 
 const services = [
