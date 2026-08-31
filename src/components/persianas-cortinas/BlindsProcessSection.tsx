@@ -32,9 +32,10 @@ const included = [
 
 export default function BlindsProcessSection() {
   return (
-    <section id="processo" className="bg-white py-16 sm:py-24">
+    <section id="processo" className="bg-brand-dark py-16 text-white sm:py-24">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <SectionHeading
+          tone="light"
           eyebrow="Como Funciona"
           title="Etapas do processo e tudo incluso"
           description="Um processo simples, feito no local, para higienizar persianas e cortinas sem tirar sua empresa do ritmo."
@@ -44,20 +45,20 @@ export default function BlindsProcessSection() {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-6"
+              className="flex flex-col gap-2 rounded-xl border border-white/10 bg-white/5 p-6"
             >
               <span className="text-3xl font-extrabold text-brand-accent">{index + 1}</span>
-              <h3 className="font-semibold text-brand-dark">{step.title}</h3>
-              <p className="text-sm text-zinc-600">{step.description}</p>
+              <h3 className="font-semibold text-white">{step.title}</h3>
+              <p className="text-sm text-zinc-300">{step.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 rounded-2xl bg-brand-tint/40 p-6 sm:p-8">
-          <h3 className="font-semibold text-brand-dark">Tudo incluso</h3>
+        <div className="flex flex-col gap-4 rounded-2xl bg-white/5 p-6 sm:p-8">
+          <h3 className="font-semibold text-white">Tudo incluso</h3>
           <ul className="grid gap-3 sm:grid-cols-2">
             {included.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-zinc-700">
+              <li key={item} className="flex items-start gap-3 text-sm text-zinc-200">
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-accent text-xs font-bold text-brand-dark">
                   ✓
                 </span>

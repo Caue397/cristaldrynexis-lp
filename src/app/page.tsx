@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <main className="flex flex-1 flex-col">
       <Hero />
-      <BeforeAfterSection />
       <ClientsSection />
-      <IdealApplicationsSection />
+      <BeforeAfterSection />
+      <TechnologySection />
       <MethodSection />
       <DifferentialsSection />
-      <TechnologySection />
+      <IdealApplicationsSection />
       <ContractPlansSection />
       <ConsultingSection />
       <OtherServicesSection />
